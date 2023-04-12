@@ -5,11 +5,19 @@
 **Objective**: Create an interactive map that displays the geographic locations from the provided dataset and highlights the relative risk levels using color-coded markers.
 
 ### Tasks:
-1. Set up a Next.js + TypeScript boilerplate app and integrate a mapping library (e.g., Mapbox, Leaflet, Google Maps).
-2. Load and parse the sample geo and multi-factor climate risk datasets.
-3. Display the locations from the dataset as markers on the map.
-4. Color-code the markers based on their relative risk levels derived from the dataset.
-5. Add interactivity to the map, such as zooming and panning.
+1. Set up a Next.js boilerplate app with the following command under Node v18 environment
+    ```shell
+    yarn create next-app risk-viz --ts --tailwind --eslint --src-dir --import-alias "@/*" --experimental-app
+    ```
+    _or_
+    ```shell
+    npx create-next-app@latest risk-viz --ts --tailwind --eslint --src-dir --import-alias "@/*" --experimental-app
+    ```
+2. Integrate a mapping library (e.g., Mapbox, Leaflet, Google Maps).
+3. Load and parse the sample geo and multi-factor climate risk datasets.
+4. Display the locations from the dataset as markers on the map.
+5. Color-code the markers based on their relative risk levels derived from the dataset.
+6. Add interactivity to the map, such as zooming and panning.
 
 ## Problem 2: Create a Data Table with Sorting and Filtering Capabilities
 
