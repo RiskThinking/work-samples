@@ -49,3 +49,29 @@ Tasks:
 1. Design a user interface that integrates the map, data table, and line graph components.
 2. Implement state management to handle user interactions and data flow between components (e.g., selecting a location on the map updates the line graph and data table).
 3. Optimize the app's performance by implementing lazy loading for components and efficient data handling, such as pagination for the data table.
+
+## Notes
+
+- You are encouraged to use any open source libraries to assist with the given problems.
+- You can use AI assistants (such as ChatGPT or GitHub Copilot), but make sure to include the full interaction/chat log along with your solution.
+- Attribute tutorials, Stackoverflow Q&As, and any other references along with your solution.
+- You are encouraged to ask any questions you may have during the hiring process, including but not limited to questions related to the work sample itself.
+- Keep in mind that both the amount and the dimension of the data we work with are much higher in reality, so try to demonstrate that your solutions can handle beyond the sample scale.
+- Try to think of yourself as the user of the web app, who may want to have certain questions answered, such as:
+    - What are the top risk factors by ranking?
+    - What regions are at the most risk?
+    - What risk factors impact a particular category the most?
+    - Any others that you can think of...
+
+## Submission
+
+- Host your solution code in a open source repository (e.g. GitHub).
+- Deploy your solutions through a suitable service (see below for recommended services).
+- Reply to the original work sample email with your solution source and deployment links.
+
+Some recommended services are:
+
+- [Glitch](https://glitch.com/)
+- [GitHub Pages](https://pages.github.com/)
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
