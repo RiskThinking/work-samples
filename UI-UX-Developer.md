@@ -45,7 +45,7 @@
 
 **Objective**: Combine the components from the previous problems into a cohesive web app, ensuring optimal performance and user experience.
 
-Tasks:
+### Tasks:
 1. Design a user interface that integrates the map, data table, and line graph components.
 2. Implement state management to handle user interactions and data flow between components (e.g., selecting a location on the map updates the line graph and data table).
 3. Optimize the app's performance by implementing lazy loading for components and efficient data handling, such as pagination for the data table.
