@@ -1,5 +1,7 @@
 # Work Sample for UI/UX Developers
 
+You are given a sample [Climate Risk Rating dataset](https://docs.google.com/spreadsheets/d/1Y_yiT-_7IimioBvcqiCPwLzTLazfdRyzZ4k3cpQXiAw/edit#gid=681415175) in order to solve the following problems.
+
 ## Problem 1: Implement a Map with Location Markers and Risk Indicators
 
 **Objective**: Create an interactive map that displays the geographic locations from the provided dataset and highlights the relative risk levels using color-coded markers.
