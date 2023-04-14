@@ -49,6 +49,7 @@
 1. Design a user interface that integrates the map, data table, and line graph components.
 2. Implement state management to handle user interactions and data flow between components (e.g., selecting a location on the map updates the line graph and data table).
 3. Optimize the app's performance by implementing lazy loading for components and efficient data handling, such as pagination for the data table.
+4. (Bonus) Implement reasonable tests for utility functions, data flow hooks, and React components.
 
 ## Notes
 
@@ -62,14 +63,15 @@
     - What regions are at the most risk?
     - What risk factors impact a particular category the most?
     - Any others that you can think of...
+- You are more than welcome to keep your solutions public as a part of your professional portfolio.
 
 ## Submission
 
-- Host your solution code in a open source repository (e.g. GitHub).
-- Deploy your solutions through a suitable service (see below for recommended services).
-- Reply to the original work sample email with your solution source and deployment links.
+1. Host your solution code in a open source repository (e.g. GitHub).
+2. Deploy your solutions through a suitable service (see below for recommended services, especially [Glitch](https://glitch.com/)).
+3. Reply to the original work sample email with your solution source and deployment links.
 
-Some recommended services are:
+Some recommended services for your deployments are:
 
 - [Glitch](https://glitch.com/)
 - [GitHub Pages](https://pages.github.com/)
