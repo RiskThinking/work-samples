@@ -4,37 +4,37 @@ Solve the following problems using a DAG (Directed Acyclic Graph) oriented tool,
 
 ## Problem 1: Climate Data Processing
 
-**Objective**: Ingest and transform raw climate data in batch mode.
+**Objective**: Ingest and transform raw climate data.
 
 ### Tasks:
-1. Implement data tasks to ingest raw climate data in batch mode from multiple sources and transform it into a common format.
+1. Implement data tasks to ingest raw climate data from multiple sources and transform it into a common format.
 2. Output resulting dataset into a structured format (e.g., Parquet).
 3. Optimize performance and throughput by leveraging means such as parallelization, multiprocessing, multithreading, etc.
 
 ## Problem 2: Finance Data Processing
 
-**Objective**: Ingest and transform real-time financial data streams.
+**Objective**: Ingest and transform raw financial data.
 
 ### Tasks:
-1. Implement data tasks to ingest real-time financial data streams and transform into a format that can be joined against the Climate Data from Problem 1 on geo and time signals.
+1. Implement data tasks to ingest financial data and transform into a format that can be joined against the Climate Data from Problem 1 on geo and time signals.
 2. Output resulting dataset into a structure format (e.g., Parquet).
 3. Optimize performance and throughput by leveraging means such as parallelization, multiprocessing, multithreading, etc.
 
-## Problem 3: Data Integration
+## Problem 3: ML Training
 
-**Objective**: Integrate climate and finance data using geo and time signals, perform aggregations.
-
-### Tasks:
-1. Integrate climate and finance data using geo and time signals and perform aggregations.
-2. Retain the resulting aggregated dataset into a relational database (such as SQLite).
-
-## Problem 4: API Service
-
-**Objective**: Build an API service to serve data queries.
+**Objective**: Integrate climate and finance data using geo and time signals, perform machine learning to train a predictive model.
 
 ### Tasks:
-1. Implement one or multiple API endpoints for real-time queries into the relational database from Problem 3.
-2. Implement one or multiple API endpoints for queries into the stage-retained dataset from Problem 1 and 2 (e.g., Parquet).
+1. Integrate climate and finance data using geo and time signals.
+2. _WIP details_
+
+## Problem 4: Model Serving
+
+**Objective**: Build an API service to serve the trained predictive model.
+
+### Tasks:
+1. Implement an API service to serve the trained predictive model.
+2. _WIP details_
 3. (Bonus) Implement reasonable tests for data processing tasks from Problems 1-3.
 
 ## Notes
