@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --map-border-color: 102, 80, 80;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +14,7 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --map-border-color: 102, 80, 80;
   }
 }
 
@@ -24,4 +26,38 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+#__next {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.loading-font-container{
+  background-color: aliceblue;
+  color: black;
+  font-weight: bold;
+  border-color: black;
+  width: 90vw;
+  height: 50vh;
+  border-width: 1px;
+  align-items: center;
+  display: flex;
+}
+#loading-text{
+  position: absolute;
+  text-align: center;
+  display: block;
+  width: inherit;
+}
+
+.map-container{
+  border-width: 5px;
+  border-color: rgb(var(--map-border-color));
+  border-radius: 5px;
 }
