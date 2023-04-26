@@ -37,14 +37,52 @@ To provide more context and clarity, including pipeline specs and diagrams can b
 
 **Objective**: Integrate an ML predictive model training step into the data pipeline.
 
+You can use the following simple Random Forest model as a reference:
+
 ```python
-# WIP some simple training process
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+
+# Assume `data` is loaded as a Pandas DataFrame
+data['Date'] = pd.to_datetime(data['Date'])
+data.set_index('Date', inplace=True)
+
+# Remove rows with NaN values
+data.dropna(inplace=True)
+
+# Select features and target
+features = ['vol_moving_avg', 'adj_close_rolling_med']
+target = 'Volume'
+
+X = data[features]
+y = data[target]
+
+# Split data into train and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create a RandomForestRegressor model
+model = RandomForestRegressor(n_estimators=100, random_state=42)
+
+# Train the model
+model.fit(X_train, y_train)
+
+# Make predictions on test data
+y_pred = model.predict(X_test)
+
+# Calculate the Mean Absolute Error and Mean Squared Error
+mae = mean_absolute_error(y_test, y_pred)
+mse = mean_squared_error(y_test, y_pred)
 ```
+
+You may come up with your own process with any choice of model architectures, algorithms, libraries, and training configurations.
 
 ### Tasks:
 1. Integrate the ML training process as a part of the data pipeline.
-2. Retain the resulting model to the disk, name it as `model.bin`.
-3. Log all training loss values to the disk as log files.
+2. Save the resulting model to disk.
+3. Persist any training metrics, such as loss and error values as log files.
+4. (Bonus) If you choose your own model implementation, articulate why it's better as a part of your submission.
 
 ## Problem 4: Model Serving
 
@@ -57,7 +95,7 @@ To provide more context and clarity, including pipeline specs and diagrams can b
 
 ## Notes
 
-- Correctly and optimally orchestrate the data tasks from Problem 1-3. Leverage the pipeline specs and diagrams to help with your decisions.
+- Correctly and optimally orchestrate the data tasks from Problem 1-3. Leverage the pipeline specs and diagrams to help with your decisions, parallelize as many tasks as possible.
 - Optimize performance and throughput of each data task by leveraging means such as parallelization, multiprocessing, multithreading, etc
 
 ## Submission
