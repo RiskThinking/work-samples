@@ -1,13 +1,15 @@
 # Work Sample for Data Engineer
 
-Solve the following data pipeline problems using a DAG (Directed Acyclic Graph) oriented tool, such as Pachyderm, Airflow, Dagster, etc.
+To effectively solve the following data pipeline problems, it is essential to use a DAG (Directed Acyclic Graph) oriented tool. DAG tools like Pachyderm, Airflow, Dagster, etc., can help streamline data processing and management with tracking data lineage, ensuring data integrity, and minimizing errors during processing.
+
+To provide more context and clarity, including pipeline specs and diagrams can be helpful. These artifacts can help visualize the DAG and its components, provide information on how data flows through the pipeline, and highlight the dependencies between tasks.
 
 ## Problem 1: Raw Data Processing
 
 **Objective**: Ingest and process raw stock market datasets.
 
 ### Tasks:
-1. Download the raw datasets from https://www.kaggle.com/datasets/jacksoncrow/stock-market-dataset.
+1. Download the ETF and stock datasets from the primary dataset available at https://www.kaggle.com/datasets/jacksoncrow/stock-market-dataset.
 2. Setup a data structure to retain all data from ETFs and stocks with the following columns.
     ```
     Symbol: string
@@ -20,7 +22,7 @@ Solve the following data pipeline problems using a DAG (Directed Acyclic Graph) 
     Adj Close: float
     Volume: int
     ```
-3. Retain the resulting dataset into a structured format (e.g. Parquet).
+3. Convert the resulting dataset into a structured format (e.g. Parquet).
 
 ## Problem 2: Feature Engineering
 
@@ -28,7 +30,7 @@ Solve the following data pipeline problems using a DAG (Directed Acyclic Graph) 
 
 ### Tasks:
 1. Calculate the moving average of the trading volume (`Volume`) of 30 days per each stock and ETF, and retain it in a newly added column `vol_moving_avg`.
-2. Similarly, calcualte the rolling median and retain it in a newly added column `adj_close_rolling_med`.
+2. Similarly, calculate the rolling median and retain it in a newly added column `adj_close_rolling_med`.
 3. Retain the resulting dataset into the same format as Problem 1, but in its own stage/directory distinct from the first.
 
 ## Problem 3: Integrate ML Training
@@ -55,7 +57,7 @@ Solve the following data pipeline problems using a DAG (Directed Acyclic Graph) 
 
 ## Notes
 
-- Correctly and optimally orchestrate the data tasks from Problem 1-3
+- Correctly and optimally orchestrate the data tasks from Problem 1-3. Leverage the pipeline specs and diagrams to help with your decisions.
 - Optimize performance and throughput of each data task by leveraging means such as parallelization, multiprocessing, multithreading, etc
 
 ## Submission
