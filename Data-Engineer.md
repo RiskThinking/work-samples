@@ -101,8 +101,24 @@ You may come up with your own process with any choice of model architectures, al
 ## Notes
 
 - Correctly and optimally orchestrate the data tasks from Problem 1-3. Leverage the pipeline specs and diagrams to help with your decisions, parallelize as many tasks as possible.
-- Optimize performance and throughput of each data task by leveraging means such as parallelization, multiprocessing, multithreading, etc
+- Optimize performance and throughput of each data task by leveraging means such as parallelization, multiprocessing, multithreading, etc.
+- You are encouraged to use any open source libraries to assist with the given problems.
+- You can use AI assistants (such as ChatGPT or GitHub Copilot), but make sure to include the full interaction/chat log along with your solution.
+- Attribute tutorials, Stackoverflow Q&As, and any other references along with your solution.
+- You are encouraged to ask any questions you may have during the hiring process, including but not limited to questions related to the work sample itself.
+- You are more than welcome to keep your solutions public as a part of your professional portfolio.
 
 ## Submission
 
-_WIP_
+1. Host all your solution code (Problem 1-4) in a open source repository (e.g. GitHub).
+2. In the same repository, Dockerize the entire workflow for Problems 1-3 (the data/training pipeline) with necessary dependencies and build/execution configurations.
+3. In the same repository, retain a log file from pipeline execution.
+4. For Problem 4 (Model Serving), deploy the API server with the model through a suitable service (see below for recommended services, such as Glitch).
+5. Reply to the original work sample email with your solution source and deployment links.
+
+Some recommended services for your API server deployments are:
+
+- [Fly.io](https://fly.io/)
+- [Glitch](https://glitch.com/)
+- [Deta](https://deta.space/)
+- [render](https://render.com/)
