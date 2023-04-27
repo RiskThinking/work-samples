@@ -123,3 +123,4 @@ Some recommended services for your API server deployments are:
 - [Deta](https://deta.space/)
 - [render](https://render.com/)
 - [Heroku](https://www.heroku.com/)
+- Any other of your own choice
