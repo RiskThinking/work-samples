@@ -90,8 +90,13 @@ You may come up with your own process with any choice of model architectures, al
 
 ### Tasks:
 1. Implement an API service to serve the trained predictive model.
-2. An API endpoint should take two values, `vol_moving_avg` and `adj_close_rolling_med`, and responds with an integer value that represents the trading volume.
-3. (Bonus) Implement reasonable tests for the tasks from Problems 1-2.
+2. An `/predict` API endpoint which takes two values, `vol_moving_avg` and `adj_close_rolling_med`, and responds with an integer value that represents the trading volume.
+    ```shell
+    # hypothetical HTTP GET request and response
+    GET /predict?vol_moving_avg=12345&adj_close_rolling_med=25
+    -> 10350
+    ```
+3. (Bonus) Test the API service, document your methodology, provisioned computing resources, test results, a breakdown of observable bottlenecks (e.g. model loading/inference, socket/IO, etc.), and improvement suggestions for hypothetical future iterations.
 
 ## Notes
 
