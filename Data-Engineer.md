@@ -122,3 +122,4 @@ Some recommended services for your API server deployments are:
 - [Glitch](https://glitch.com/)
 - [Deta](https://deta.space/)
 - [render](https://render.com/)
+- [Heroku](https://www.heroku.com/)
