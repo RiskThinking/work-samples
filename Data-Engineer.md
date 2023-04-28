@@ -114,8 +114,9 @@ You may come up with your own process with any choice of model architectures, al
 1. Host all your solution code (Problem 1-4) in a open source repository (e.g. GitHub).
 2. In the same repository, Dockerize the entire workflow for Problems 1-3 (the data/training pipeline) with necessary dependencies and build/execution configurations.
 3. In the same repository, retain a log file from pipeline execution.
-4. For Problem 4 (Model Serving), deploy the API server with the model through a suitable service (see below for recommended services, such as Glitch).
-5. Reply to the original work sample email with your solution source and deployment links.
+4. In the same repository, retain any pipeline specs, diagrams, and any relevant documentation.
+5. For Problem 4 (Model Serving), deploy the API server with the model through a suitable service (see below for recommended services, such as Glitch).
+6. Reply to the original work sample email with your solution source and deployment links.
 
 Some recommended services for your API server deployments are:
 
