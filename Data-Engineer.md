@@ -32,6 +32,7 @@ To provide more context and clarity, including pipeline specs and diagrams can b
 1. Calculate the moving average of the trading volume (`Volume`) of 30 days per each stock and ETF, and retain it in a newly added column `vol_moving_avg`.
 2. Similarly, calculate the rolling median and retain it in a newly added column `adj_close_rolling_med`.
 3. Retain the resulting dataset into the same format as Problem 1, but in its own stage/directory distinct from the first.
+4. (Bonus) Write unit tests for any relevant logic.
 
 ## Problem 3: Integrate ML Training
 
