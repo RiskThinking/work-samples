@@ -20,7 +20,7 @@ To provide more context and clarity, including pipeline specs and diagrams can b
     Low: float
     Close: float
     Adj Close: float
-    Volume: int
+    Volume: A suitable Number type (int or float)
     ```
 3. Convert the resulting dataset into a structured format (e.g. Parquet).
 
@@ -116,12 +116,15 @@ You may come up with your own process with any choice of model architectures, al
 3. In the same repository, retain a log file from pipeline execution.
 4. In the same repository, retain any pipeline specs, diagrams, and any relevant documentation.
 5. For Problem 4 (Model Serving), deploy the API server with the model through a suitable service (see below for recommended services, such as Glitch).
+    - If you have difficulty hosting the API server (e.g. due to dependency being too large), you may include an executed Python Notebook that demonstrates successful HTTP request(s) to the API server (which can be locally run at the time) and the response(s).
+    - A successful and functional deployment of the API server may be awarded slightly more in evaluation.
 6. Reply to the original work sample email with your solution source and deployment links.
 
 Some recommended services for your API server deployments are:
 
 - [Fly.io](https://fly.io/)
 - [Glitch](https://glitch.com/)
+- [Hugging Face Space](https://huggingface.co/spaces/)
 - [Deta](https://deta.space/)
 - [render](https://render.com/)
 - [Heroku](https://www.heroku.com/)
