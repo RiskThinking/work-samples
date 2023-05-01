@@ -116,7 +116,7 @@ You may come up with your own process with any choice of model architectures, al
 3. In the same repository, retain a log file from pipeline execution.
 4. In the same repository, retain any pipeline specs, diagrams, and any relevant documentation.
 5. For Problem 4 (Model Serving), deploy the API server with the model through a suitable service (see below for recommended services, such as Glitch).
-    - If you have difficulty hosting the API server (e.g. due to dependency being too large), you may include an executed Python Notebook that demonstrates successful HTTP request(s) to THE API server (which can be locally run at the time) and the response(s).
+    - If you have difficulty hosting the API server (e.g. due to dependency being too large), you may include an executed Python Notebook that demonstrates successful HTTP request(s) to the API server (which can be locally run at the time) and the response(s).
     - A successful and functional deployment of the API server may be awarded slightly more in evaluation.
 6. Reply to the original work sample email with your solution source and deployment links.
 
