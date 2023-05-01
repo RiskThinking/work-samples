@@ -20,7 +20,7 @@ To provide more context and clarity, including pipeline specs and diagrams can b
     Low: float
     Close: float
     Adj Close: float
-    Volume: int
+    Volume: A suitable Number type (int or float)
     ```
 3. Convert the resulting dataset into a structured format (e.g. Parquet).
 
