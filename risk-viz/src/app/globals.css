@@ -38,26 +38,93 @@ body {
   box-sizing: border-box;
 }
 
-.loading-font-container{
-  background-color: aliceblue;
-  color: black;
-  font-weight: bold;
-  border-color: black;
-  width: 90vw;
-  height: 50vh;
-  border-width: 1px;
-  align-items: center;
-  display: flex;
-}
-#loading-text{
-  position: absolute;
-  text-align: center;
-  display: block;
-  width: inherit;
-}
-
 .map-container{
   border-width: 5px;
   border-color: rgb(var(--map-border-color));
   border-radius: 5px;
+  position: relative;
+}
+
+.dropbtn {
+  background-color: #0e1915e4;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  width: inherit;
+  border-radius: 10px;
+}
+
+.dropbtn:enabled:hover {
+  transform: scale(1.01);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.8);
+  border-radius: 10px 10px 10px 0;
+}
+
+.dropdown {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 240px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: inherit;
+}
+
+.dropdown-content button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: inherit;
+}
+
+.dropdown-content button:hover {
+  background-color: #ddd; 
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.8);
+  
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #142720;}
+
+.marker {
+  background-size:auto;
+  background: no-repeat;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}
+
+.marker-red{
+  background-image: url('./assets/mapbox-marker-icon-20px-red.png');
+}
+
+.marker-orange{
+  background-image: url('./assets/mapbox-marker-icon-20px-orange.png');
+}
+
+.marker-yellow{
+  background-image: url('./assets/mapbox-marker-icon-20px-yellow.png');
+}
+
+.marker-blue{
+  background-image: url('./assets/mapbox-marker-icon-20px-blue.png');
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
 }
