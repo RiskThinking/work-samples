@@ -3,7 +3,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  headers: [{key: "Access-Control-Allow-Origin", value: "https://risk-viz-delta.vercel.app/"},],
+  headers: [{key: "Access-Control-Allow-Origin", value: "true"},],
 
 }
 
