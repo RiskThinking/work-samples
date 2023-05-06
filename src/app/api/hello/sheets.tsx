@@ -1,12 +1,12 @@
 
-const sheetID = process.env.NEXT_PUBLIC_SHEET_ID;
+const sheetID = (process.env.NEXT_PUBLIC_SHEET_ID || '');
 const baseURL = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
 const sheetName = 'sample_data';
-var queryData = process.env.NEXT_PUBLIC_QUERY_YEARS;
+var queryData = (process.env.NEXT_PUBLIC_QUERY_YEARS || '');
 var query = encodeURIComponent(queryData);
 var url = `${baseURL}&sheet=${sheetName}&tq=${query}`; 
-var data = [];
-function setData(elements){
+var data: any[] = [];
+function setData(elements:any[]){
     data = elements;
 }    
 
@@ -18,11 +18,11 @@ async function sheetDataProps(){
     .then( res => res.text())
     .then(rep => {
         const sheetData = JSON.parse(rep.substring(47).slice(0,-2));
-        const datas = [];
+        const datas:any[] = [];
         
-        sheetData.table.rows.forEach((main) =>{
-            const row = {};
-            main.c.forEach((ele, ind) =>{
+        sheetData.table.rows.forEach((main:any) =>{
+            const row:any = {};
+            main.c.forEach((ele:any, ind:any) =>{
                 row[ind] = ele.v;
             })
             datas.push(row);

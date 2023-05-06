@@ -6,8 +6,8 @@ import { parse } from './api/hello/sheets';
 import { getCoordinates, setYear, getYear, setMax, setMin } from './api/hello/getMarkers';
 import mapboxgl from 'mapbox-gl';
 var dateYear = '';
-var mapboxMarkers = [];
-var geoJson = [];
+var mapboxMarkers: MapboxGL.Marker[] = [];
+var geoJson:any[] = [];
 var orderType = 0;
 // creates the html for the year selection
 function createHTML(uniqueY: any[]){
@@ -24,7 +24,7 @@ function createHTML(uniqueY: any[]){
 
 } 
 
-function onYearSelected(year){
+function onYearSelected(year:any){
     const doc = document.getElementById('button-title');
     doc?.replaceChildren(`Year: ${year}`);
     setYear(year);
@@ -42,20 +42,20 @@ function getYearList(uniqueY: any[]){
     }));
 }
 
-var data;
+var data:any[];
 function setData(){
     data = parse();
 }
 
 // control function for dropping the data table to see the risk factors
-function dropDataTable(id){
+function dropDataTable(id:any){
     const doc = document.getElementById(`${id}`) as HTMLElement;
     doc.style.display = doc.style.display === 'block' 
     ? 'none' : 'block';
 
 }
 
-var columnsData = [];
+var columnsData:any[] = [];
 // function to display and inject the HTML script into the website
 //  could be improved and made cleaner
 function addDataList(){
@@ -101,6 +101,7 @@ function addDataList(){
         keys.forEach(keyFactor => {
             let factordiv = document.createElement('div');
             factordiv.className = 'Factor-div';
+            //@ts-ignore
             factordiv.innerText = `Risk Factor: ${keyFactor}: ${factors[keyFactor]}`;
             listCanvas.appendChild(factordiv);
         });
@@ -116,7 +117,7 @@ function addDataList(){
 
 // creates and parses the geoJson coordinates for marker placement
 // slight bug: it does not seem to display the markers in the right spots reason: unknown at this time
-function setCoordinates(coords){
+function setCoordinates(coords:any[]){
     geoJson = [];
     columnsData = coords;
     columnsData?.forEach((ele) => {
@@ -141,7 +142,7 @@ function setCoordinates(coords){
 // async methods to take a promise value and set it in a global variable
 const LoadCoordinates = async () => {
     try{
-        const res = await getCoordinates(orderType);
+        const res:any = await getCoordinates(orderType);
         setCoordinates(res);
     }catch(err){
         console.log(err);
@@ -149,9 +150,9 @@ const LoadCoordinates = async () => {
 }
 let hasData:boolean = false;
 let postedMarkers:boolean = false;
-var htmlCode;
+var htmlCode:any;
 // function to place the markers
-function addMarkers(map){
+function addMarkers(map:any){
     geoJson?.forEach(function (feature) {
         const el = document.createElement('div');
         const temp = feature.features.properties.risklevel
@@ -171,11 +172,13 @@ function addMarkers(map){
             <p>${feature.features.properties.Business}</p>`
         ));
         //mouse hovers over marker
+        //@ts-ignore
         marker.getElement() .addEventListener('mouseenter', function(event: PointerEvent){
             event.stopPropagation();
             marker.togglePopup();
         });
         //mouse leaves marker
+        //@ts-ignore
         marker.getElement().addEventListener('mouseleave', function(event: PointerEvent){
             event.stopPropagation();
             marker.togglePopup();
@@ -200,7 +203,7 @@ export function MapBoxMap(){
     setData();
     hasData = data !== undefined && data?.length > 0 ? true : false;
     if(hasData){//quick bug fix
-        !initFlag ? setYear(data[0]) : '';
+        !initFlag ? setYear((data !== undefined ? data[0] : '')) : '';
         initFlag = true;
         htmlCode = createHTML(data);
         LoadCoordinates();
@@ -227,9 +230,9 @@ export function MapBoxMap(){
         
         mapboxMap.addControl(new MapboxGL.NavigationControl(), 'top-right');
         mapboxMap.on('move', () => {
-            setLat(mapboxMap.getCenter().lat.toFixed(4));
-            setLng(mapboxMap.getCenter().lng.toFixed(4));
-            setZoom(mapboxMap.getZoom().toFixed(1));
+            setLat(mapboxMap.getCenter().lat);
+            setLng(mapboxMap.getCenter().lng);
+            setZoom(mapboxMap.getZoom());
             
         });
 
@@ -314,7 +317,7 @@ export function DataTable(){
 //sidebar controller
 var sidebarControlFlag:boolean = false;
 // sidebar btn control method for animation
-export const sidebarBtnController = (e) =>{
+export const sidebarBtnController = () =>{
     const sidebar = document.getElementById('sidebar') as HTMLElement;
     const sidebarBtn = document.getElementById('sidebar-access-btn') as HTMLElement;
     sidebarControlFlag ? sidebar.style.animation ='fadeout 100ms linear backwards'
@@ -329,19 +332,30 @@ export const sidebarBtnController = (e) =>{
 export function minMaxRisk(){
     const min = document.getElementById('minInputRisk') as HTMLElement;
     const max = document.getElementById('maxInputRisk') as HTMLElement;
+    //@ts-ignore
     if(min.value < 0){
+        //@ts-ignore
         min.value = 0;
     }
+    //@ts-ignore
     if(max.value > 1){
+        //@ts-ignore
         max.value = 1;
     }
+    //@ts-ignore
     if(min.value > max.value){
+        //@ts-ignore
         min.value = max.value;
     }
+    //@ts-ignore
     if(max.value < min.value){
+        //@ts-ignore
         max.value = min.value;
     }
+    
+    //@ts-ignore
     setMax(max.value);
+    //@ts-ignore
     setMin(min.value);
     LoadCoordinates();
 

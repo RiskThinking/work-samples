@@ -71,14 +71,14 @@ function setOptions (){
 }
 
 var chartdata:any[] = [];
-function setChartData(data){
+function setChartData(data:any[]){
     chartdata = data;
     parseData();
 }
 // sets chart data based on asset name
 const LoadAChartData = async () =>{
     try{
-        const res = await getAChart(chartTypeSelected);
+        const res:any = await getAChart(chartTypeSelected);
         setChartData(res);
     }catch(err){
         console.log(err);
@@ -87,7 +87,7 @@ const LoadAChartData = async () =>{
 //  sets chart data based on business name
 const LoadBChartData = async () =>{
     try{
-        const res = await getBChart(chartTypeSelected);
+        const res:any = await getBChart(chartTypeSelected);
         setChartData(res);
     }catch(err){
         console.log(err);
@@ -96,11 +96,11 @@ const LoadBChartData = async () =>{
 
 var chartTypeSelected = '';
 
-function setATypeSelected(type){
+function setATypeSelected(type:any){
     chartTypeSelected = type;
     LoadAChartData();
 }
-function setBTypeSelected(type){
+function setBTypeSelected(type:any){
     chartTypeSelected = type;
     LoadBChartData();
 }
@@ -109,7 +109,7 @@ LoadBChartData();
 var assetNames:any[] = [];
 // sets and appends business and asset names when called
 //and updated the control div
-function setAssetNames(data){
+function setAssetNames(data:any){
     assetNames = data;
     const doc = document.getElementById('selectable-data') as HTMLElement;
     doc.innerHTML='';
@@ -139,7 +139,7 @@ const LoadAssetNames = async () => {
 
 var businessNames:any[] = [];
 
-function setBusinessNames(data){
+function setBusinessNames(data:any){
     businessNames = data;
     const doc = document.getElementById('selectable-data') as HTMLElement;
     doc.innerHTML='';
