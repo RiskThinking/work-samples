@@ -3,7 +3,6 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  headers: [{key: "Access-Control-Allow-Origin", value: "true"},],
 
 }
 
