@@ -6,15 +6,16 @@ var dateYear = '';
 var max = 1;
 var min = 0;
 //setters and getter to change output based on user input
-export function setMin(val){
+export function setMin(val:number){
     min = val;
 }
 
-export function setMax(val){
+export function setMax(val:number){
     max = val;
 }
 
-export function setYear(year){
+export function setYear(year:any){
+
     dateYear = `${year}`;
 }
 
@@ -25,7 +26,7 @@ export function getYear(){
 var orderby = ''
 var riskRange = '';
 //the helper function returns a promise the coordinates based on year
-async function getPositionData(orderType){
+async function getPositionData(orderType:any){
         orderType === 1 ? orderby = process.env.NEXT_PUBLIC_ORDER_BY_RISK_ASC || ''
         : orderType === 2 ? orderby = process.env.NEXT_PUBLIC_ORDER_BY_RISK_DESC || ''
         : orderby = '';
