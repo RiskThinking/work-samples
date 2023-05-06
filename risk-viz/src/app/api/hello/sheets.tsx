@@ -10,7 +10,7 @@ function setData(elements){
     data = elements;
 }    
 
-
+//returns just the years could split up the other scripts functions like this for readability
 async function sheetDataProps(){
     
     

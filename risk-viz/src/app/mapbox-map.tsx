@@ -9,7 +9,7 @@ var dateYear = '';
 var mapboxMarkers = [];
 var geoJson = [];
 var orderType = 0;
-
+// creates the html for the year selection
 function createHTML(uniqueY: any[]){
     dateYear = getYear();
     return (
@@ -47,7 +47,7 @@ function setData(){
     data = parse();
 }
 
-
+// control function for dropping the data table to see the risk factors
 function dropDataTable(id){
     const doc = document.getElementById(`${id}`) as HTMLElement;
     doc.style.display = doc.style.display === 'block' 
@@ -56,6 +56,8 @@ function dropDataTable(id){
 }
 
 var columnsData = [];
+// function to display and inject the HTML script into the website
+//  could be improved and made cleaner
 function addDataList(){
     getYear();
     const doc = document.getElementById('data-list') as HTMLElement;
@@ -111,6 +113,9 @@ function addDataList(){
     postedMarkers = false;
 
 }
+
+// creates and parses the geoJson coordinates for marker placement
+// slight bug: it does not seem to display the markers in the right spots reason: unknown at this time
 function setCoordinates(coords){
     geoJson = [];
     columnsData = coords;
@@ -133,6 +138,7 @@ function setCoordinates(coords){
     });
     addDataList();
 }
+// async methods to take a promise value and set it in a global variable
 const LoadCoordinates = async () => {
     try{
         const res = await getCoordinates(orderType);
@@ -144,6 +150,7 @@ const LoadCoordinates = async () => {
 let hasData:boolean = false;
 let postedMarkers:boolean = false;
 var htmlCode;
+// function to place the markers
 function addMarkers(map){
     geoJson?.forEach(function (feature) {
         const el = document.createElement('div');
@@ -181,6 +188,7 @@ function addMarkers(map){
 }
 //control bool
 var initFlag: boolean = false;
+// main map creation function
 export function MapBoxMap(){
     
    
@@ -237,7 +245,7 @@ export function MapBoxMap(){
 
 var riskBtnFlag: boolean = false;
 
-
+// loading screen which overlays in the canvas div to show that the filtered data is being loaded
 function createLoadingScreen(){
     const table = document.getElementById('data-list') as HTMLElement;
     table.innerHTML = '';
@@ -249,6 +257,7 @@ function createLoadingScreen(){
 
     table.appendChild(loading);
 }
+// sort contorl function
 function sortByRisk(){
 
     if(riskBtnFlag){
@@ -274,6 +283,7 @@ function sortByRisk(){
         LoadCoordinates();
     };
 }
+// data table return function to add the basic HTML template
 export function DataTable(){
  
    const htmlcode = (
@@ -303,6 +313,7 @@ export function DataTable(){
 
 //sidebar controller
 var sidebarControlFlag:boolean = false;
+// sidebar btn control method for animation
 export const sidebarBtnController = (e) =>{
     const sidebar = document.getElementById('sidebar') as HTMLElement;
     const sidebarBtn = document.getElementById('sidebar-access-btn') as HTMLElement;
@@ -314,7 +325,7 @@ export const sidebarBtnController = (e) =>{
     sidebarControlFlag = !sidebarControlFlag;
 
 };
-
+// setting the min max filter option and reloads the data this is a control method
 export function minMaxRisk(){
     const min = document.getElementById('minInputRisk') as HTMLElement;
     const max = document.getElementById('maxInputRisk') as HTMLElement;

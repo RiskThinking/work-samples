@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* this css is used in every script */
 :root {
   --foreground-rgb: 230,230,230;
   --background-start-rgb: 5, 5, 5;
@@ -27,7 +27,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
+/* setting the scroll bar */
 body::-webkit-scrollbar{
   background: lightgray;
   opacity: 0.7;
@@ -51,14 +51,14 @@ body::-webkit-scrollbar-thumb{
 * {
   box-sizing: border-box;
 }
-
+/* map container */
 .map-container{
   border-width: 5px;
   border-color: rgb(var(--map-border-color));
   border-radius: 5px;
   position: relative;
 }
-
+/* year selection drop css script */
 .dropbtn {
   background-color: #0e1915e4;
   color: white;
@@ -108,7 +108,7 @@ body::-webkit-scrollbar-thumb{
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #142720;}
-
+/* marker display */
 .marker {
   background-size:auto;
   background: no-repeat;
@@ -142,9 +142,9 @@ body::-webkit-scrollbar-thumb{
   font-family: 'Open Sans', sans-serif;
   color: black;
 }
-
+/* table data which is filtered and parsed and is styled below */
 .data-table{
-  margin-top: 5px;
+  margin-top: 70px;
   border-color: rgb(var(--map-border-color));
   border-width: 5px;
   border-radius: 5px;
@@ -176,12 +176,13 @@ body::-webkit-scrollbar-thumb{
 }
 
 #data-list{
+  position: relative;
   overflow-y: auto;
   width: 100%;
   height: 29vh;
   overflow-x: hidden;
 }
-
+/* scroll bar for that same data table */
 #data-list::-webkit-scrollbar{
   background: lightgray;
   opacity: 0.7;
@@ -194,7 +195,7 @@ body::-webkit-scrollbar-thumb{
   width: 5px;
   opacity: 0.4;
 }
-
+/* side bar which holds one filter type */
 #sidebar-access-btn{
   transform: rotate(0deg);
   width: 5vw;
@@ -240,7 +241,7 @@ body::-webkit-scrollbar-thumb{
     scale: 1.1;
   }
 }
-
+/* top bar largely for appeal but also holds buttons which help with interactivity */
 #top-bar{
   width: 100vw;
   height: 12vh;
@@ -282,7 +283,7 @@ body::-webkit-scrollbar-thumb{
     
   }
 }
-
+/* all the data in the data tables are styled below */
 .listItem{
   position: relative;
   display: inline-block;
@@ -341,7 +342,7 @@ body::-webkit-scrollbar-thumb{
   height: 8vh;
   font-weight: bolder;
 }
-
+/* arrows in the data table for the risk button  */
 .arrow{
   border: solid black;
   border-width: 0 3px 3px 0;
@@ -442,4 +443,146 @@ h1{
   color: black;
   left: 1.5vw;
   position: relative;
+}
+/* top bar buttons styling */
+#select-map{
+  position: relative;
+  justify-content: center;
+  top: 5vh;
+  color: black;
+  left: 35vw;
+  width: 13vw;
+  height: 5.5vh;
+  border-radius: 10px;
+  border: 2px rgba(155, 226, 49, 0.709) solid;
+  background-color: rgb(30, 148, 30);
+}
+
+#select-chart:hover, #select-map:hover{
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  animation: animateBtn 1s infinite;
+  scale: 1.1;
+  
+}
+
+
+@keyframes animateBtn{
+  0%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(10deg);
+  }
+  50%{
+    transform: rotate(0deg);
+  }
+  75%{
+    transform: rotate(-10deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+#select-chart{
+  position: relative;
+  justify-content: center;
+  top: 5vh;
+  color: black;
+  left: 45vw;
+  width: 13vw;
+  height: 5.5vh;
+  border-radius: 10px;
+  border: 2px rgba(161, 209, 232, 0.711) solid;
+  background-color: rgb(182, 226, 232);
+}
+
+#riskChart{
+  width: 65vw;
+  height: 60vh;
+  
+  position: relative;
+  display: none;
+}
+/* chart containers and it's control options */
+.chart-container{
+  width: 65.5vw;
+  height: 80vh;
+  position: relative;
+  margin-bottom: 2vh;
+}
+
+.chart-controller{
+  width: inherit;
+  height: 24vh;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background-color: white;
+  border: 5px rgb(111, 75, 75) solid;
+  border-radius: 5px;
+  overflow: hidden;
+  
+}
+
+.controllerHeading{
+  width: inherit;
+  height: 7vh;
+  border: 1px #040304 solid;
+  background-color: whitesmoke;
+  display: flex;
+  overflow: hidden;
+}
+
+.chartbox{
+  border: 5px rgb(111, 75, 75) solid;
+  border-radius: 5px;
+}
+
+.chart-control-btn{
+  width: inherit;
+  height: inherit;
+  border: 1px black solid;
+  color: black;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.chart-control-btn:hover{
+  background-color: rgba(205, 182, 182, 0.789);
+  font-size: large;
+}
+
+#selectable-data{
+  width: 64.5vw;
+  height: inherit;
+  overflow-x: hidden;
+}
+
+.chartButtons{
+  width: inherit;
+  height: inherit;
+  border: 1px black solid;
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+  background-color: white;
+}
+
+.chartButtons:hover{
+  background-color: rgba(199, 169, 169, 0.79);
+
+}
+/* scroll bar for the control options */
+#selectable-data::-webkit-scrollbar{
+  background: lightgray;
+  opacity: 0.7;
+  width: 9px;
+}
+
+#selectable-data::-webkit-scrollbar-thumb{
+  background-color: darkslategray;
+  border-radius: 20px;
+  width: 6px;
+  opacity: 0.7;
 }

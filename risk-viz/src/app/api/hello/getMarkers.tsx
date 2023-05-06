@@ -1,5 +1,3 @@
-import { publicDecrypt } from "crypto";
-
 
 const sheetID = process.env.NEXT_PUBLIC_SHEET_ID;
 const baseURL = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
@@ -7,7 +5,7 @@ const sheetName = 'sample_data';
 var dateYear = '';
 var max = 1;
 var min = 0;
-
+//setters and getter to change output based on user input
 export function setMin(val){
     min = val;
 }
@@ -26,6 +24,7 @@ export function getYear(){
 
 var orderby = ''
 var riskRange = '';
+//the helper function returns a promise the coordinates based on year
 async function getPositionData(orderType){
         orderType === 1 ? orderby = process.env.NEXT_PUBLIC_ORDER_BY_RISK_ASC || ''
         : orderType === 2 ? orderby = process.env.NEXT_PUBLIC_ORDER_BY_RISK_DESC || ''
@@ -55,7 +54,7 @@ async function getPositionData(orderType){
         }));
         return data;
 }
-
+//the main function 
 export async function getCoordinates(orderType){
     return getPositionData(orderType);
 }
