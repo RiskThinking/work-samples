@@ -5,7 +5,9 @@ import HighchartsReact from 'highcharts-react-official';
 /*
 * this class isn't complete but has enough functionality to show the template for 
 * what the charge will have
-* issue: updating the chart functionality isn't implemented fully
+* issue: updating the chart functionality isn't implemented fully or properly updated
+* need to refresh each time by saving the code after pressing an option
+* in the control panel in order for the chart to update
 * data is parsed and retrieved using the control method but no update function which updates
 * the chart
 */
