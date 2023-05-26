@@ -1,6 +1,6 @@
 # Work Sample for Product Designer
 
-You are tasked with designing the user interface for a climate risk dashboard web app. Your goal is to create a cohesive and user-friendly design that allows users to interact with the provided dataset and gain insights into climate change and its risk implications.
+You are tasked with designing the user interface for a climate risk dashboard web app. Your goal is to create a cohesive and user-friendly design that allows users to interact with the provided dataset and gain insights into climate change and its risk implications. This work sample consists of three problem areas, each focusing on a specific aspect of the design process.
 
 You may refer to the [Climate Risk Rating dataset](https://docs.google.com/spreadsheets/d/1Y_yiT-_7IimioBvcqiCPwLzTLazfdRyzZ4k3cpQXiAw) to assist with your solutions.
 
@@ -15,23 +15,17 @@ You may refer to the [Climate Risk Rating dataset](https://docs.google.com/sprea
 4. Develop a wireframe for a component that presents a line graph visualization of risk levels over time for similar filters designed for the map and the data table components.
 5. Develop a view that combines the map, data table, and line graph components into a cohesive and intuitive interface.
 
-## Problem 2: Visual Design
+## Problem 2: Visual Design and Prototyping
 
-**Objective**: Create an appealing visual design for the *map component* that aligns with the project's goals.
+**Objective**: Create an appealing visual design for the *map component* (from Problem 1 Task 2) that aligns with the project's goals, with interactions and transitions to enhance the user experience and demonstrate functionality.
 
 ### Task:
-1. For the *map component* from Problem 1 Task 2, develop a visual design concept that reflects the theme of climate risk assessment, considering the target audience and the need for clear data visualization.
+1. Develop a visual design concept that reflects the theme of climate risk assessment, considering the target audience and the need for clear data visualization.
+2. Define interactive elements such as buttons, dropdowns, sliders, tooltips and legends, ensuring they are intuitive and easy to use.
+3. Design transitions and animations to provide visual feedback and enhance the user experience during interactions.
+4. Create an interactive prototype using a design tool (e.g. Figma) to demonstrate the flow and interactions.
 
-## Problem 3: Interaction Design and Prototyping
-
-**Objective**: For the *map component*, design its interactions and transitions to enhance the user experience and demonstrate functionality.
-
-### Tasks:
-1. Define interactive elements such as buttons, dropdowns, sliders, tooltips and legends, ensuring they are intuitive and easy to use.
-2. Design transitions and animations to provide visual feedback and enhance the user experience during interactions.
-3. Create an interactive prototype using a design tool (e.g. Figma) to demonstrate the flow and interactions.
-
-## Problem 4: Design System and Branding
+## Problem 3: Design System and Branding
 
 **Objective**: Develop a minimal design system for consistent user experience and branding across other components, views, and product lines with the same key UI/UX elements developed for the *map component*.
 
