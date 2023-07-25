@@ -1,1 +1,1 @@
-  This directory contains data for the work samples.
+  This directory contains data for the research work samples.
