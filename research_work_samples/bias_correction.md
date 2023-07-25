@@ -1,4 +1,4 @@
-# This is an old version. Use [updated version](cleaned_bias_correction.md) instead. 
+# This is an old version. Use [updated version](bias_correction_cleaned.md) instead. 
 
 ___
 
