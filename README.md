@@ -4,4 +4,4 @@
 
 ## [Data Engineer](Data-Engineer.md)
 
-## [Bias Correction](research_work_samples/bias_correction.md)
+## [Bias Correction](research_work_samples/Bias-Correction.md)
