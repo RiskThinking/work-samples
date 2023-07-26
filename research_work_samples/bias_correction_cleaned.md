@@ -47,5 +47,5 @@ Respond to the following prompts. Limit each response to **100-150 words** (conc
 2. What was the rationale behind your choice of climate data? What are the limitations in your selection of datasets?
 3. How would you address these limitations?
 4. Would you use different methods and datasets to downscale and bias-correct different variables? For example, temperature fields vs precipitation fields.
-5. Given enough resources (time, compute, and storage), what techniques/methodologies would you employ to achieve a better outcome.
+5. Given enough resources (time, compute, and storage), what techniques/methodologies would you employ to achieve a better outcome?
 6. What techniques did you use, or could use, to make your process more efficient in terms of computational and storage requirements?
