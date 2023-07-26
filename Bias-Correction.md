@@ -23,7 +23,7 @@ Downscale and bias-correct the future maximum temperature for the target region.
 
 Please note that we chose Lytton as an example for a specific reason. Are there any trade offs associated with your data, methods, and results? There is no right or wrong answer. All methodologies and datasets have their advantages and disadvantages. 
 
-Make sure you provide sufficient details about your chosen methodology, assumptions, and thought process. Feel free to use any programming language. Submit your response in the form of a Jupyter notebook, R Markdown, or something similar. Host your solution in an open source repository (e.g. GitHub).
+Make sure you provide sufficient details about your chosen methodology, assumptions, and thought process.
 
 ## Task 3: Documentation
 
@@ -39,3 +39,7 @@ Respond to the following prompts. Limit each response to **100-150 words** (conc
 4. Would you use different methods and datasets to downscale and bias-correct different variables? For example, temperature fields vs precipitation fields.
 5. Given enough resources (time, compute, and storage), what techniques/methodologies would you employ to achieve a better outcome?
 6. What techniques did you use, or could use, to make your process more efficient in terms of computational and storage requirements?
+
+## Submission
+
+Make sure you provide sufficient details about your chosen methodology, assumptions, and thought process. Feel free to use any programming language. Submit your response in the form of a Jupyter notebook, R Markdown, or something similar. Host your solution in an open source repository (e.g. GitHub).
