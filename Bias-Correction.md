@@ -4,7 +4,7 @@
 
 ## Task 1: Download data
 
-In the data folder, we have provided you with historical climate data (daily maximum temperature) for a region in North America. The file is called [daily_maximum_temperature.nc](data/daily_maximum_temperature.nc). It roughly covers an area of 500 km x 500 km, centered on Lytton, BC, Canada. This data comes from ECMWF Reanalysis v5 (ERA5).
+In the data folder, we have provided you with historical climate data (daily maximum temperature) for a region in North America. The file is called [daily_maximum_temperature.nc](research_data/daily_maximum_temperature.nc). It roughly covers an area of 500 km x 500 km, centered on Lytton, BC, Canada. This data comes from ECMWF Reanalysis v5 (ERA5).
 
 Select a global climate model from the CMIP6 experiments, and download the historical (1951-2015) and future data (2015 - 2100) for one emission scenario. We provide some potentially useful links below, but feel free to use other resources:
 
