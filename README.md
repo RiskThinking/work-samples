@@ -6,4 +6,4 @@
 
 ## Research Work Samples
 
-### [Bias Correction](research_work_samples/bias_correction.md)
+1. ### [Bias Correction](research_work_samples/bias_correction.md)
