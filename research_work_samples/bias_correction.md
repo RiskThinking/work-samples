@@ -2,11 +2,7 @@
 
 **Objective**: Ingest and process raw climate data
 
-**Total points**: 100
-
 ## Task 1: Download data
-
-**[10 points]**
 
 In the data folder, we have provided you with historical climate data (daily maximum temperature) for a region in North America. The file is called [daily_maximum_temperature.nc](data/daily_maximum_temperature.nc). It roughly covers an area of 500 km x 500 km, centered on Lytton, BC, Canada. This data comes from ECMWF Reanalysis v5 (ERA5).
 
@@ -23,8 +19,6 @@ Write a brief note (200-250 words) explaining why you chose that particular data
 
 ## Task 2: Process the data
 
-**[50 points]**
-
 Downscale and bias-correct the future maximum temperature for the target region. Note that this is a subset of a larger dataset and the overarching goal is to bias-correct the entire global dataset. The methodology you choose here should be scalable to work globally. 
 
 Please note that we chose Lytton as an example for a specific reason. Are there any trade offs associated with your data, methods, and results? There is no right or wrong answer. All methodologies and datasets have their advantages and disadvantages. 
@@ -33,13 +27,9 @@ Make sure you provide sufficient details about your chosen methodology, assumpti
 
 ## Task 3: Documentation
 
-**[20 points]**
-
 Document the methodology and results of your project, similar to an abstract submission or a conference poster (200-250 words). Candidates are encouraged to use maps and figures.
 
 ## Task 4: Results and discussion
-
-**[20 points]**
 
 Respond to the following prompts. Limit each response to **100-150 words** (conciseness is appreciated).
 
