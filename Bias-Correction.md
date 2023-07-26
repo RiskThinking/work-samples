@@ -15,7 +15,7 @@ Select a global climate model from the CMIP6 experiments, and download the histo
 - https://catalog.pangeo.io/browse/master/
 - https://gallery.pangeo.io/repos/pangeo-gallery/cmip6/intake_ESM_example.html
 
-Write a brief note (200-250 words) explaining why you chose that particular dataset, and your intended methodology for performing the analysis (details below).
+Write a brief note **(200-250 words)** explaining why you chose that particular dataset, and your intended methodology for performing the analysis (details below).
 
 ## Task 2: Process the data
 
