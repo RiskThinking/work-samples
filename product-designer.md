@@ -25,15 +25,13 @@ Provide the before and after flowcharts with clear labelling of the suggested op
 
 ## Notes
 
-- You are welcome to use any tools to achieve the goal.
-    - You are encouraged to use existing design elements and systems to facilitate the mockups.
-    - You can use AI assistants (such as ChatGPT, Bing Chat, DALL-E, Microsoft Designer, etc.).
+- You are welcome to use any tools to achieve the goal. Be sure to document them in your submission.
 - You are encouraged to ask any questions you may have during the hiring process, including but not limited to the work sample itself.
 - Remember that the amount and the dimension of the data we work with are much higher in reality, so try to demonstrate that your solutions can handle beyond the sample scale.
 - You are welcome to keep your solutions public as a part of your professional portfolio.
 
 ## Submission
 
-- Submit your solutions through publicly accessible means, such as Notion, Figma/FigJam, etc.
+- Submit your solutions through publicly accessible means, such as Notion, Figma/FigJam, GitHub, etc.
 - For any AI assistant interactions and logs, retain and share them as a part of your solutions.
 - Reply to the original work sample email with all applicable links of your work sample solutions.
