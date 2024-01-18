@@ -1,5 +1,7 @@
 # Work Samples
 
+## [Full Stack Developer](full-stack-developer.md)
+
 ## [Product Designer](product-designer.md)
 
 ## [UI/UX Developer](UI-UX-Developer.md)
