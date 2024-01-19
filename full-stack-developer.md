@@ -4,8 +4,9 @@ You are provided with a set of Parquet files containing sample datasets. Your ta
 
 The sample datasets are as follows:
 
+#### [Climate Data](full_stack_data/climate_data.parquet)
+
 ```
--- full_stack_data/climate_data.parquet
 ┌─────────────────────┬───────────┬──────────────────────┬────────────────────┬────────────────────┬─────────────────────┬───────────────────┬────────────────────┐
 │      timestamp      │ region_id │     temperature      │   precipitation    │      humidity      │     wind_speed      │ air_quality_index │   cloud_coverage   │
 │      timestamp      │   int64   │        double        │       double       │       double       │       double        │       int64       │       double       │
@@ -58,8 +59,9 @@ The sample datasets are as follows:
 └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
+#### [AQI (Air Quality Index) Reference](full_stack_data/aqi_reference.parquet)
+
 ```
--- full_stack_data/aqi_reference.parquet
 ┌────────────────────────────────┬─────────────────┬───────────────┐
 │          aqi_category          │ aqi_range_start │ aqi_range_end │
 │            varchar             │      int64      │     int64     │
@@ -73,8 +75,9 @@ The sample datasets are as follows:
 └────────────────────────────────┴─────────────────┴───────────────┘
 ```
 
+#### [Regions](full_stack_data/regions.parquet)
+
 ```
--- full_stack_data/regions.parquet
 ┌───────────┬──────────────────┬─────────────────────┬─────────────────────┬────────────────────┐
 │ region_id │   region_name    │      latitude       │      longitude      │     elevation      │
 │   int64   │     varchar      │       double        │       double        │       double       │
